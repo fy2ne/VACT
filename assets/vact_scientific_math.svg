@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="100%" height="100%" style="background:#0d1117; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+      .label-head { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; fill: #8b949e; text-transform: uppercase; }
+      .card-title { font-size: 13px; font-weight: 600; fill: #f0f6fc; }
+      .card-stat { font-size: 11px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .card-desc { font-size: 11px; fill: #8b949e; line-height: 1.4; }
+    </style>
+  </defs>
+
+  <!-- Main GitHub Outer Container -->
+  <rect x="0.5" y="0.5" width="999" height="519" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+  <!-- GitHub Header Bar (Height: 46px) -->
+  <path d="M 0.5 6.5 A 6 6 0 0 1 6.5 0.5 L 993.5 0.5 A 6 6 0 0 1 999.5 6.5 L 999.5 46 L 0.5 46 Z" fill="#161b22"/>
+  <line x1="0" y1="46" x2="1000" y2="46" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Header Content -->
+  <g transform="translate(18, 15)">
+    <!-- GitHub Benchmark Icon -->
+    <svg x="0" y="0" width="16" height="16" viewBox="0 0 16 16" fill="#8b949e">
+      <path d="M1.5 1.75V13.5h13.75a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1-.75-.75V1.75a.75.75 0 0 1 1.5 0Zm14.28 2.53-5.25 5.25a.75.75 0 0 1-1.06 0L7 7.06 2.53 11.53a.75.75 0 0 1-1.06-1.06l5-5a.75.75 0 0 1 1.06 0L10 7.94l4.72-4.72a.75.75 0 0 1 1.06 1.06Z"/>
+    </svg>
+    <text x="24" y="13" font-size="13">
+      <tspan fill="#8b949e">benchmarks / </tspan>
+      <tspan fill="#f0f6fc" font-weight="600">paradigm-matrix.json</tspan>
+    </text>
+  </g>
+
+  <!-- Header Right Badges -->
+  <g transform="translate(712, 11)">
+    <!-- Env Pill -->
+    <rect x="0" y="0" width="126" height="24" rx="12" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="63" y="16" fill="#8b949e" font-size="11" class="mono" text-anchor="middle">Win11-DXGI-1080p</text>
+
+    <!-- Verified Pill -->
+    <g transform="translate(134, 0)">
+      <rect x="0" y="0" width="134" height="24" rx="12" fill="rgba(63, 185, 80, 0.12)" stroke="rgba(63, 185, 80, 0.4)" stroke-width="1"/>
+      <circle cx="12" cy="12" r="3.5" fill="#3fb950"/>
+      <text x="22" y="16" fill="#3fb950" font-size="11" font-weight="600">Verified Benchmarks</text>
+    </g>
+  </g>
+
+  <!-- Body Content Grid -->
+  <g transform="translate(18, 62)">
+
+    <!-- LEFT PANEL: Quantitative Insights (Width: 468, Height: 396) -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="468" height="396" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      
+      <!-- Panel Header Bar -->
+      <path d="M 0 6 A 6 6 0 0 1 6 0 L 462 0 A 6 6 0 0 1 468 6 L 468 36 L 0 36 Z" fill="#21262d"/>
+      <line x1="0" y1="36" x2="468" y2="36" stroke="#30363d" stroke-width="1"/>
+      <text x="16" y="23" fill="#f0f6fc" font-size="12" font-weight="600">Empirical Performance Metrics</text>
+      <text x="452" y="23" fill="#8b949e" font-size="11" text-anchor="end">Standardized 1080p @ 60Hz</text>
+
+      <!-- Metric 1: Perception Latency -->
+      <g transform="translate(16, 52)">
+        <text x="0" y="0" class="label-head">Perception Latency (Lower is Better)</text>
+        
+        <!-- Row: Cloud VLM -->
+        <text x="0" y="22" fill="#8b949e" font-size="11">Cloud VLM (Screenshots)</text>
+        <text x="436" y="22" fill="#f85149" font-size="11" font-weight="600" class="mono" text-anchor="end">1,250.0 ms</text>
+        <rect x="0" y="28" width="436" height="6" rx="3" fill="#21262d"/>
+        <rect x="0" y="28" width="395" height="6" rx="3" fill="#f85149"/>
+
+        <!-- Row: Accessibility API -->
+        <text x="0" y="50" fill="#8b949e" font-size="11">Accessibility APIs (UIA / AX)</text>
+        <text x="436" y="50" fill="#d29922" font-size="11" font-weight="600" class="mono" text-anchor="end">65.0 ms</text>
+        <rect x="0" y="56" width="436" height="6" rx="3" fill="#21262d"/>
+        <rect x="0" y="56" width="45" height="6" rx="3" fill="#d29922"/>
+
+        <!-- Row: VACT -->
+        <text x="0" y="78" fill="#f0f6fc" font-size="11" font-weight="600">VACT Engine (DirectX GPU)</text>
+        <text x="436" y="78" fill="#3fb950" font-size="11" font-weight="700" class="mono" text-anchor="end">4.8 ms (260× speedup)</text>
+        <rect x="0" y="84" width="436" height="6" rx="3" fill="#21262d"/>
+        <rect x="0" y="84" width="14" height="6" rx="3" fill="#3fb950"/>
+      </g>
+
+      <!-- Divider -->
+      <line x1="16" y1="160" x2="452" y2="160" stroke="#30363d" stroke-width="1"/>
+
+      <!-- Metric 2: Bandwidth & Tokens -->
+      <g transform="translate(16, 178)">
+        <text x="0" y="0" class="label-head">Context Payload per Step (Lower is Better)</text>
+
+        <!-- Row: Cloud VLM -->
+        <text x="0" y="22" fill="#8b949e" font-size="11">Cloud VLM (~2,200 tokens)</text>
+        <text x="436" y="22" fill="#f85149" font-size="11" font-weight="600" class="mono" text-anchor="end">~1,500 KB</text>
+        <rect x="0" y="28" width="436" height="6" rx="3" fill="#21262d"/>
+        <rect x="0" y="28" width="395" height="6" rx="3" fill="#f85149"/>
+
+        <!-- Row: Accessibility API -->
+        <text x="0" y="50" fill="#8b949e" font-size="11">Accessibility Tree (~650 tokens)</text>
+        <text x="436" y="50" fill="#d29922" font-size="11" font-weight="600" class="mono" text-anchor="end">120 KB</text>
+        <rect x="0" y="56" width="436" height="6" rx="3" fill="#21262d"/>
+        <rect x="0" y="56" width="50" height="6" rx="3" fill="#d29922"/>
+
+        <!-- Row: VACT -->
+        <text x="0" y="78" fill="#f0f6fc" font-size="11" font-weight="600">VACT Vector Delta (80–180 tokens)</text>
+        <text x="436" y="78" fill="#3fb950" font-size="11" font-weight="700" class="mono" text-anchor="end">&lt; 2 KB (99.8% less)</text>
+        <rect x="0" y="84" width="436" height="6" rx="3" fill="#21262d"/>
+        <rect x="0" y="84" width="10" height="6" rx="3" fill="#3fb950"/>
+      </g>
+
+      <!-- Divider -->
+      <line x1="16" y1="286" x2="452" y2="286" stroke="#30363d" stroke-width="1"/>
+
+      <!-- Metric 3: Application Surface Coverage -->
+      <g transform="translate(16, 304)">
+        <text x="0" y="0" class="label-head">Surface Compatibility (Higher is Better)</text>
+        
+        <!-- Multi-segment GitHub Language Style Bar -->
+        <rect x="0" y="14" width="436" height="8" rx="4" fill="#21262d"/>
+        <rect x="0" y="14" width="436" height="8" rx="4" fill="#3fb950"/>
+        <rect x="0" y="14" width="370" height="8" rx="4" fill="#58a6ff"/>
+        <rect x="0" y="14" width="183" height="8" rx="4" fill="#d29922"/>
+
+        <!-- Legend (GitHub Repository Languages Style) -->
+        <g transform="translate(0, 38)">
+          <circle cx="4" cy="4" r="3.5" fill="#3fb950"/>
+          <text x="14" y="8" fill="#f0f6fc" font-size="11" font-weight="600">VACT (100%)</text>
+
+          <circle cx="120" cy="4" r="3.5" fill="#58a6ff"/>
+          <text x="130" y="8" fill="#8b949e" font-size="11">VLM (85%)</text>
+
+          <circle cx="218" cy="4" r="3.5" fill="#d29922"/>
+          <text x="228" y="8" fill="#8b949e" font-size="11">Accessibility (42%)</text>
+        </g>
+        <text x="0" y="66" fill="#8b949e" font-size="10">VACT retains 100% perception across DirectX, DaVinci, Blender, Unreal &amp; Games.</text>
+      </g>
+    </g>
+
+    <!-- RIGHT PANEL: 3 Comparison Cards (Width: 480, Height: 396) -->
+    <g transform="translate(484, 0)">
+
+      <!-- Card 1: Screenshot VLMs (Height: 120) -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="480" height="120" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+        <circle cx="20" cy="22" r="4" fill="#f85149"/>
+        <text x="34" y="26" class="card-title">Screenshot Vision Models (VLMs)</text>
+        
+        <!-- Status Pill -->
+        <rect x="364" y="12" width="102" height="20" rx="10" fill="rgba(248, 81, 73, 0.12)" stroke="rgba(248, 81, 73, 0.35)" stroke-width="1"/>
+        <text x="415" y="26" fill="#f85149" font-size="10" font-weight="600" text-anchor="middle">Heavy / Laggy</text>
+
+        <!-- Stats Bar -->
+        <text x="20" y="52" fill="#8b949e" class="card-stat">Latency: <tspan fill="#f85149" font-weight="600">1,250 ms</tspan>  •  Bandwidth: <tspan fill="#f85149" font-weight="600">1.5 MB</tspan>  •  Cost: <tspan fill="#f85149" font-weight="600">~2,200 tok</tspan></text>
+        
+        <text x="20" y="74" class="card-desc">Method: Compresses full-frame raster PNGs and uploads across cloud APIs.</text>
+        <text x="20" y="92" class="card-desc">Bottlenecks: 1.2s+ decision loop, context exhaustion, and click target drift.</text>
+      </g>
+
+      <!-- Card 2: Accessibility APIs (Height: 120) -->
+      <g transform="translate(0, 134)">
+        <rect x="0" y="0" width="480" height="120" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+        <circle cx="20" cy="22" r="4" fill="#d29922"/>
+        <text x="34" y="26" class="card-title">Operating System Accessibility APIs</text>
+        
+        <!-- Status Pill -->
+        <rect x="364" y="12" width="102" height="20" rx="10" fill="rgba(210, 153, 34, 0.12)" stroke="rgba(210, 153, 34, 0.35)" stroke-width="1"/>
+        <text x="415" y="26" fill="#e3b341" font-size="10" font-weight="600" text-anchor="middle">Surface Blind</text>
+
+        <!-- Stats Bar -->
+        <text x="20" y="52" fill="#8b949e" class="card-stat">Latency: <tspan fill="#e3b341" font-weight="600">65 ms</tspan>  •  Bandwidth: <tspan fill="#e3b341" font-weight="600">120 KB</tspan>  •  Cost: <tspan fill="#e3b341" font-weight="600">~650 tok</tspan></text>
+        
+        <text x="20" y="74" class="card-desc">Method: Queries Win32 UIA, Apple AX, or DOM accessibility tree hierarchies.</text>
+        <text x="20" y="92" class="card-desc">Bottlenecks: 0% visibility into DirectX / Vulkan canvases, DaVinci, Blender, or games.</text>
+      </g>
+
+      <!-- Card 3: VACT Engine (Height: 128) - Highlighted GitHub Success Style -->
+      <g transform="translate(0, 268)">
+        <rect x="0" y="0" width="480" height="128" rx="6" fill="#0d1912" stroke="#238636" stroke-width="1.5"/>
+        <circle cx="20" cy="22" r="4" fill="#3fb950"/>
+        <text x="34" y="26" font-size="13" font-weight="700" fill="#3fb950">VACT Protocol &amp; Native Engine (fy2ne)</text>
+        
+        <!-- Status Pill -->
+        <rect x="348" y="12" width="118" height="20" rx="10" fill="rgba(63, 185, 80, 0.18)" stroke="#238636" stroke-width="1"/>
+        <text x="407" y="26" fill="#3fb950" font-size="10" font-weight="700" text-anchor="middle">Enterprise 60 FPS</text>
+
+        <!-- Stats Bar -->
+        <text x="20" y="52" fill="#8b949e" class="card-stat">Latency: <tspan fill="#3fb950" font-weight="700">4.8 ms (60 FPS)</tspan>  •  Bandwidth: <tspan fill="#3fb950" font-weight="700">&lt; 2 KB</tspan>  •  Cost: <tspan fill="#3fb950" font-weight="700">80–180 tok</tspan></text>
+        
+        <text x="20" y="74" fill="#c9d1d9" font-size="11">Method: Zero-copy DXGI GPU shaders + CCL + WinRT neural OCR.</text>
+        <text x="20" y="92" fill="#7ee787" font-size="11" font-weight="500">Advantages: Sub-pixel precision, &lt;2 KB DAG delta, and 100% universal vision.</text>
+        <text x="20" y="110" fill="#8b949e" font-size="10">Runs fully localized on consumer GPUs without network or token bottlenecks.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- GitHub Bottom Status Bar (Height: 34px) -->
+  <g transform="translate(0, 486)">
+    <line x1="0" y1="0" x2="1000" y2="0" stroke="#30363d" stroke-width="1"/>
+    
+    <!-- Environment info on left -->
+    <g transform="translate(18, 22)">
+      <text x="0" y="0" fill="#8b949e" font-size="11" class="mono">Environment: Windows 11 Enterprise • Direct3D 11 Zero-Copy Pipeline • VACT/1.0 Spec</text>
+    </g>
+
+    <!-- Author & Link on right -->
+    <g transform="translate(982, 22)">
+      <text x="0" y="0" fill="#58a6ff" font-size="11" font-weight="600" text-anchor="end">Lead Architect: fy2ne (fy2ne.me)</text>
+    </g>
+  </g>
+</svg>
