@@ -1,0 +1,98 @@
+{
+  "name": "vact-sdk",
+  "version": "1.0.0",
+  "description": "Enterprise-grade TypeScript/Node.js SDK for the VACT (Vector Agent Context Transport) protocol — real-time hardware-accelerated vector scene graph streaming for autonomous AI agents.",
+  "keywords": [
+    "vact",
+    "ai-agent",
+    "computer-use",
+    "scene-graph",
+    "desktop-automation",
+    "named-pipe",
+    "langchain",
+    "autonomous-agents"
+  ],
+  "author": "fy2ne <hello@fy2ne.me>",
+  "license": "Apache-2.0",
+  "homepage": "https://fy2ne.me",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fy2ne/VACT.git",
+    "directory": "sdks/typescript"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/esm/types/index.js",
+      "require": "./dist/cjs/types/index.js",
+      "types": "./dist/types/types/index.d.ts"
+    },
+    "./transport": {
+      "import": "./dist/esm/transport/index.js",
+      "require": "./dist/cjs/transport/index.js",
+      "types": "./dist/types/transport/index.d.ts"
+    },
+    "./query": {
+      "import": "./dist/esm/query/index.js",
+      "require": "./dist/cjs/query/index.js",
+      "types": "./dist/types/query/index.d.ts"
+    },
+    "./agent": {
+      "import": "./dist/esm/agent/index.js",
+      "require": "./dist/cjs/agent/index.js",
+      "types": "./dist/types/agent/index.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:esm && npm run build:cjs && npm run build:types",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build && npm run test && npm run lint"
+  },
+  "dependencies": {
+    "eventemitter3": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "eslint": "^8.57.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.0.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  }
+}
