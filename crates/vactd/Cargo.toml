@@ -1,0 +1,30 @@
+[package]
+name    = "vactd"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+name = "vactd"
+path = "src/lib.rs"
+
+[[bin]]
+name = "vactd"
+path = "src/main.rs"
+
+[dependencies]
+log.workspace        = true
+env_logger.workspace = true
+ctrlc.workspace      = true
+windows.workspace    = true
+image.workspace      = true
+wgpu.workspace       = true
+pollster.workspace   = true
+bytemuck.workspace   = true
+vact-core = { path = "../vact-core" }
+vact-protocol = { path = "../vact-protocol" }
+serde.workspace    = true
+serde_json.workspace = true
+rusqlite.workspace   = true
+
