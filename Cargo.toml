@@ -1,0 +1,53 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/vactd",
+    "crates/vact-core",
+    "crates/vact-protocol",
+]
+
+[workspace.package]
+version      = "0.1.0"
+edition      = "2021"
+authors      = ["fy2ne <hello@fy2ne.me>"]
+license      = "Apache-2.0"
+repository   = "https://github.com/fy2ne/VACT"
+homepage     = "https://fy2ne.me"
+
+[workspace.dependencies]
+log        = "0.4"
+env_logger = "0.11"
+serde      = { version = "1", features = ["derive"] }
+serde_json = "1"
+ctrlc      = "3"
+image      = "0.25"
+bytemuck   = { version = "1.21", features = ["derive"] }
+pollster   = "0.4"
+wgpu       = "24.0"
+rusqlite   = { version = "0.33", features = ["bundled"] }
+windows    = { version = "0.61", features = [
+    "Foundation",
+    "Foundation_Collections",
+    "Graphics_Imaging",
+    "Media_Ocr",
+    "Globalization",
+    "Storage_Streams",
+    "Win32_Foundation",
+    "Win32_Graphics_Direct3D",
+    "Win32_Graphics_Direct3D11",
+    "Win32_Graphics_Dxgi",
+    "Win32_Graphics_Dxgi_Common",
+    "Win32_Graphics_Gdi",
+    "Win32_System_WinRT",
+    "Win32_System_Com",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Accessibility",
+    "Win32_System_Pipes",
+    "Win32_Storage_FileSystem",
+    "Win32_System_IO",
+    "Win32_Security",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_HiDpi",
+    "Win32_System_Threading",
+    "Win32_System_ProcessStatus",
+]}
