@@ -1,0 +1,70 @@
+# Rust build artifacts
+/target
+Cargo.lock
+
+# C / C++ / Windows binary artifacts
+*.pdb
+*.exp
+*.lib
+*.dll
+*.exe
+
+# Environment & secrets (CRITICAL - DO NOT COMMIT)
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+*.pem
+*.key
+*.pfx
+*credentials*.json
+*service-account*.json
+
+# Runtime databases & caches
+*.db
+*.db-shm
+*.db-wal
+vact_memory.db*
+
+# Node / TypeScript
+node_modules/
+dist/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+build/
+
+# Local mission traces & logs
+**/logs/mission_*.json
+**/logs/mission_*.md
+*.log
+
+# Debug dumps & scratch files
+debug_*.png
+scratch/
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dedicated Website (Separate repository fy2ne/VACT-website)
+/website/
+.wrangler/
