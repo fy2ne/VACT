@@ -1,0 +1,35 @@
+{
+  "name": "vact-agent-runner",
+  "version": "1.0.0",
+  "description": "Standalone Multi-Model Autonomous Agent Test Runner for VACT Protocol",
+  "author": "fy2ne <hello@fy2ne.me>",
+  "license": "Apache-2.0",
+  "homepage": "https://fy2ne.me",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fy2ne/VACT.git",
+    "directory": "apps/agent-runner"
+  },
+  "type": "module",
+  "bin": {
+    "vact-agent": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "google-auth-library": "^11.0.2",
+    "vact-sdk": "file:../../sdks/typescript"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.0.0"
+  }
+}
